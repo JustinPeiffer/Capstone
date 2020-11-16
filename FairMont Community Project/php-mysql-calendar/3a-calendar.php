@@ -11,8 +11,7 @@ $yearNow = date("Y", $unix); ?>
   <head>
     <title>Simple PHP Calendar</title>
     <script src="public/3b-calendar.js"></script>
-    <!--<link href="public/3c-theme.css" rel="stylesheet">-->
-	<link href="Main.css" rel="stylesheet">
+    <link href="public/3c-theme.css" rel="stylesheet">
   </head>
   <body>
 <h1>
@@ -28,13 +27,13 @@ Hello
 document.write(); // Name goes here
 </script>
 <nav><ul>
-    <li><a href="Services.html">Services</a></li>
-    <li><a href="Donations.html">Donations</a></li>
-	<li><a href="History.html">History</a></li>
-	<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
-	<li><a href="Events.html">Events</a></li>
-	<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
-	<li><a href="School.html">School</a></li>
+    <li><a href="../Services.html">Services</a></li>
+    <li><a href="../Donations.html">Donations</a></li>
+	<li><a href="../History.html">History</a></li>
+	<li><a href="../SocialWorker.html">Social&nbsp;Worker</a></li>
+	<li><a href="/3a-calendar.php">Events</a></li>
+	<li><a href="../MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
+	<li><a href="../School.html">School</a></li>
 </ul></nav>
     <!-- [DATE SELECTOR] -->
     <div id="selector">
