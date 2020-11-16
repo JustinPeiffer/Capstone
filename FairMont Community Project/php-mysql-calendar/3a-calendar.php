@@ -31,7 +31,7 @@ document.write(); // Name goes here
     <li><a href="../Donations.html">Donations</a></li>
 	<li><a href="../History.html">History</a></li>
 	<li><a href="../SocialWorker.html">Social&nbsp;Worker</a></li>
-	<li><a href="/3a-calendar.php">Events</a></li>
+	<li><a href="3a-calendar.php">Events</a></li>
 	<li><a href="../MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
 	<li><a href="../School.html">School</a></li>
 </ul></nav>

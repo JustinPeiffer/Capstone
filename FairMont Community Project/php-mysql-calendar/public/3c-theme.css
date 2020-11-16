@@ -1,7 +1,4 @@
-/* [SITE] */
-html, body, textarea, input{
-  font-family: arial;
-}
+@import "../../css/Main.css";
  
 /* [PERIOD SELECTOR] */
 #selector{
