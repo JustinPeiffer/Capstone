@@ -13,7 +13,7 @@ if(isset($_POST['upd']))
 		$ext = strtolower(pathinfo($src_file_name, PATHINFO_EXTENSION));
 	if (in_array($ext, $supported_image))
 	{
-	move_uploaded_file($_FILES['file']['tmp_name'],"/../img/gallery/".$_FILES['file']['name']);
+	move_uploaded_file($_FILES['file']['tmp_name'],"../img/gallery/".$_FILES['file']['name']);
 	echo $_FILES['file']['name']." image uploade";
 	}
 	else{
