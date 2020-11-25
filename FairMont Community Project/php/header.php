@@ -105,9 +105,7 @@ body {
 
 <?php
 	if (isset($_SESSION['UID'])) {
-		echo '<h2> Hello';
-		echo " ".$_SESSION['fName']." ".$_SESSION['lName'];
-		echo '</h2>';
+		echo '<h1> Hello'." ".$_SESSION['fName']." ".$_SESSION['lName'].'</br>'."AccessLevel: ".$_SESSION['UserType'].'</br></h1>';
 	}
 ?>
 <nav><ul>

@@ -26,6 +26,7 @@
 					$_SESSION['UID'] = $row['UserID'];
 					$_SESSION['fName'] = $row['FirstName'];
 					$_SESSION['lName'] = $row['LastName'];
+					$_SESSION['UserType'] = $row['AccessLevel'];
 					header("Location: ../services.html?login=success");
 					eixt();
 				} 
