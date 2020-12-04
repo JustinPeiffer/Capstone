@@ -2,6 +2,12 @@
 	if (isset($_POST['login-submit'])) {
 		require 'dbh.php';
 		
+		
+		if (!empty($_POST['remember'])) {
+			setcookie("username",$_POST["username"],time()+(10*365*24*60*60));
+			setcookie("password",$_POST["psw"],time()+(10*365*24*60*60));
+		}
+		
 		$username = $_POST['username'];
 		$password = $_POST['psw'];
 		
@@ -27,6 +33,8 @@
 					$_SESSION['fName'] = $row['FirstName'];
 					$_SESSION['lName'] = $row['LastName'];
 					$_SESSION['UserType'] = $row['AccessLevel'];
+					
+					
 					header("Location: ../services.html?login=success");
 					eixt();
 				} 

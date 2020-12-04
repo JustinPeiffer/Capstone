@@ -7,15 +7,10 @@
   margin: auto;
 }
 
-.slideshow-container div{
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
 /* Hide the images by default */
 .mySlides {
   display: none;
+  margin-left:0px;
 }
 
 /* Next & previous buttons */
