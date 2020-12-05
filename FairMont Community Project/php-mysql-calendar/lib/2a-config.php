@@ -5,7 +5,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 // DATABASE SETTINGS - CHANGE THESE TO YOUR OWN
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'usbw');
 define('DB_NAME', 'fairmont community group');
 define('DB_CHARSET', 'utf8');
 
