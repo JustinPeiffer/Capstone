@@ -1,4 +1,6 @@
 <?php
+
+#  Dec 8th - The page is not currently coming up. 
 if (isset($_POST['reset-password-submit'])) {
 	$selector = $_POST['selector'];
 	$validator = $_POST['validator'];
