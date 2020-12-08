@@ -3,6 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <title>Main Page</title>
 <meta charset="utf-8">
@@ -16,15 +17,15 @@
 <div class="slideshow-container">
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <img src="img/blue.png" style="width:100%" border= 5px>
+    <img src="img/blue.png" border= 5px solid #555 style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <img src="img/yellow.png" style="width:100%" border= 5px>
+    <img src="img/yellow.png" border= 5px solid #555 style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <img src="img/red.png" style="width:100%" border= 5px>
+    <img src="img/red.png" border= 5px solid #555 style="width:100%">
   </div>
 
   <!-- Next and previous buttons 
@@ -60,14 +61,6 @@ The Fairmont-Lewis Coalition brings together citizens, educators and leaders fro
   <p>Footer</p>
 </div>
 <br><br><br><br>
-
-
-
-
-<!-- htaccess  able to run php through html  -->	
-
-<!--   Gallery  -- >
-<-- Button to upload images     Will ( gallery.php, uploadTestFile.php)   -->
 <?php
 $fo=opendir("img/gallery");
 while($file=readdir($fo))
@@ -104,18 +97,6 @@ while($file=readdir($fo))
 choose your image<input type="file" name="file"/><br/>
 <input type="submit" value="upload image" name="upd"/>
 </form>
-	
-<!--  About Fairmont  ->
-<!---  Dain     -->
-		
-
-
-
-
-
-
-
-
 <script>
   showSlides(slideIndex);
 </script>

@@ -1,93 +1,90 @@
-<<<<<<< HEAD
 <?php
-if (isset($_POST['reset-request-submit'])) {
-	$selector = bin2hex(random_bytes(8));
-	$token = random_bytes(32);
+
+# ----- Dec 8th - The page is not currently coming up. 
+if (isset($_POST['reset-password-submit'])) {
+	$selector = $_POST['selector'];
+	$validator = $_POST['validator'];
+	$password = $_POST['pwd'];
+	$passwordRepeat = $_POST['pwd-repeat'];
 	
-	$url = "http://localhost:8080/FairMont%20Community%20Project/php/create-new-password.php?selector=".$selector."&validator=".bin2hex($token);
-	$expires = date("U") + 1800;
+	if (empty($password) || empty($passwordRepeat)) {
+		header("Location: ../create-new-passoword.html?newpwd=empty");
+		exit();
+	}
+	else if ($password != $passwordRepeat) {
+		header("Location: ../create-new-passoword.html?newpwd=pwdnotsame");
+		exit();
+	}
 	
-	require 'dbh.php';
+	$currentDate = date("U");
 	
-	$userEmail = $_POST['email'];
+	require = 'dbh.php';
 	
-	$sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?";
+	$sql = "SELECT * FROM pwdReset WHERE pwdResetSelector=? AND pwdResetExpires>=?";
 	$stmt = mysqli_stmt_init($conn);
-	if (!mysqli_stmt_prepare($stmt,$sql)) {
-		echo "There was an error!";
+	if (!mysqli_stmt_prepare($stmt, $sql)) {
+		echo "There was an error";
 		exit();
 	}
 	else {
-		mysqli_stmt_bind_param($stmt, "s", $userEmail);
+		mysqli_stmt_bind_param($stmt, "s", $selector);
 		mysqli_stmt_execute($stmt);
-	}
-	$sql = "INSERT INTO pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (?, ?, ?, ?);";
-	$stmt = mysqli_stmt_init($conn);
-	if (!mysqli_stmt_prepare($stmt,$sql)) {
-		echo "There was an error!";
-		exit();
-	}
-	else {
-		$hashToken = password_hash($token, PASSWORD_DEFAUlT);
-		mysqli_stmt_bind_param($stmt, "ssss", $userEmail, $Selector, $hashToken, $expires);
-		mysqli_stmt_execute($stmt);
-	}
-	mysqli_stmt_close($stmt);
-	mysqli_close();
-	
-	
-}	
-else {
-	header("Location: ../main.html");
-	exit();
-}
-=======
-	if (isset($_POST["signup-submit"])) {
-		
-		
-		$username = $_POST['uid'];
-		$email = $_POST['mail'];
-		$password = $_POST['pwd'];
-		$passwordRepeat = $_POST['pwd-repeat'];
-		
-		$sql = "SELECT UserID FROM users WHERE UserID=?";
-		$stmt = mysqli_stmt_init($conn);
-		
-		/*if(!mysqli_stmt_prepare($stmt, $sql)) {
-			header("Location: ../signup.php?error=sqlerror");
+		$result = mysqli_stmt_get_result($stmt);
+		if (!$row = mysqli_fetch_assoc($result)) {
+			echo "There was an error!";
 			exit();
 		}
 		else {
-			mysqli_stmt_bind_param($stmt, "s", $username);
-			mysqli_execute($stmt);
-			mysqli_stmt_store_result($stmt);
-			$resultCheck = mysqli_stmt_num_rows($stmt);
-			if (%resultCheck > 0) {
-				header("Location: ../signup.php?error=usertake&mail=".$email);
+			$tokenBin = hex2bin($validator);
+			$tokenCheck = password_verify($tokenBin, $row["pwdResetToken"]);
+		}
+		if ($tokenCheck === false) {
+			echo "You need to re-submit your request.";
+			exit();
+		}
+		else if ($tokenCheck === true) { 
+			$tokenEmail = $row['pwdResetEmail'];
+			$sql = "SELECT * FROm users WHERE Email=?;";
+			$stmt = mysqli_stmt_init($conn);
+			if (!mysqli_stmt_prepare($stmt, $sql)) {
+				echo "There was an error";
 				exit();
 			}
 			else {
-				$sql = "INSERT INTO users (UserID, Email, Password) VALUES(?, ?, ?)";
-				$stmt = mysqli_stmt_init($conn);
-				if(!mysqli_stmt_prepare($stmt, $sql)) {
-					header("Location: ../signup.php?error=sqlerror");
+				mysqli_stmt_bind_param($stmt, "s", $tokenEmail);
+				mysqli_stmt_execute($stmt);
+				if (!$row = mysqli_fetch_assoc($result)) {
+					echo "There was an error!";
 					exit();
 				}
 				else {
-					$hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-					mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
-					mysqli_execute($stmt);
-					header("Location: ../signup.php?signup=success");
-					exit();
-				}
+					$sql = "UPDATE users SET pwdUsers=?";
+					if (!$row = mysqli_fetch_assoc($result)) {
+						echo "There was an error!";
+						exit();
+					}
+					else {
+						$newPwdHash = password_hash($password, PASSWORD_DEFAULT);
+						mysqli_stmt_bind_param($stmt, "ss", $tokenEmail, $newPwdHash);
+						mysqli_stmt_execute($stmt);
+						$sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?";
+						$stmt = mysqli_stmt_init($conn);
+						if (!mysqli_stmt_prepare($stmt, $sql)) {
+							echo "There was an error";
+							exit();
+						}
+						else {
+							mysqli_stmt_bind_param($stmt, "s", $tokenEmail);
+							mysqli_stmt_execute($stmt);
+							header("Location: ../Main.html?mewpwd=passwordupdated");
+						}
+					}
+				}	
 			}
-		}*/
-		msqli_stmt_close($stmt);
-		mysqli_close($conn);
-		
+		}	
 	}
-	else {
-		header("Location: ../signup.php);
-		exit();
-	}
->>>>>>> 5ebc5c5d1bd059025862689e6cd915d2a3bc93ab
+}
+else {
+	header("Location: ../main.php?error=passwordreset2");
+	exit();
+}
