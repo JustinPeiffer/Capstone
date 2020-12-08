@@ -1,3 +1,4 @@
+//  Adds the events to the calendar - posts through 3d-ajax.php-- good? 
 var cal = {
   // (A) SUPPORT FUNCTION - AJAX CALL
   ajax : function (data, load) {
