@@ -112,6 +112,8 @@ class Calendar {
 }
 
 // (F) DATABASE SETTINGS - CHANGE TO YOUR OWN!
+// The 3d-ajax.php save call goes here --- modify this to our phpMysql database  
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'event calandar');
 define('DB_CHARSET', 'utf8');
