@@ -83,6 +83,8 @@ while($file=readdir($fo))
 		}
 }
 {
+        // Check or ask for the proper size -- Dr. Lewis 
+
 	if(file_exists("img/gallery/".$_FILES['file']['name']))
 	{
 	echo "<font color='red'>".$_FILES['file']['name']." already exist</font>";
