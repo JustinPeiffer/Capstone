@@ -1,5 +1,7 @@
 <?php
 // (A) INVALID AJAX REQUEST
+
+// This saves
 if (!isset($_POST['req'])) { die("INVALID REQUEST"); }
 require "phpCalendar/2-cal-core.php";
 switch ($_POST['req']) {
@@ -51,6 +53,9 @@ switch ($_POST['req']) {
     break;
   
   // (C) SAVE EVENT
+    
+  // We need to save this to the same Database - phpMysql database - events table  ??
+ 
   case "save":
     echo $CAL->save(
       $_POST['start'], $_POST['end'], $_POST['txt'], $_POST['color'],
