@@ -79,7 +79,7 @@
 	<nav><ul>
 		<li><a href="Main.html">Home</a></li>
 		<li><a href="Services.html">Services</a></li>
-		<li><a href="Donations.html">Donations</a></li>
+		<li><a href="https://www.paypal.com/paypalme/FairmontCommunity/">Donations</a></li>
 		<li><a href="History.html">History</a></li>
 		<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
 		<li><a href="http://localhost:8080/FairMont%20Community%20Project/php-mysql-calendar/3a-calendar.php">Events</a></li>
