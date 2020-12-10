@@ -14,7 +14,7 @@
 		$sql = "SELECT * FROM users WHERE Username=? OR Email=?";
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
-			header("Location: ../main.html?error=sqlerror");
+			header("Location: ../login.html?error=sqlerror");
 			eixt();
 		}
 		else {
@@ -24,7 +24,7 @@
 			if ($row = mysqli_fetch_assoc($result)) {
 				$pswCheck = password_verify($password, $row['Password']);
 				if ($pswCheck == false) {
-					header("Location: ../main.html?error=wrongpsw");
+					header("Location: ../login.html?error=wrongpsw");
 					exit();
 				} 
 				else if($pswCheck == true) {
@@ -35,21 +35,21 @@
 					$_SESSION['UserType'] = $row['AccessLevel'];
 					
 					
-					header("Location: ../main.html?login=success");
+					header("Location: ../services.html?login=success");
 					eixt();
 				} 
 				else {
-					header("Location: ../main.html?error=wrongpsw");
+					header("Location: ../login.html?error=wrongpsw");
 					exit();
 				}
 			}
 			else {
-				header("Location: ../main.html?error=nouser");
+				header("Location: ../login.html?error=nouser");
 				exit();
 			}
 		}
 	}
 	else {
-		header("Location: ../main.html");
+		header("Location: ../services.html");
 		exit();
 	}

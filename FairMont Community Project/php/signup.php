@@ -37,7 +37,7 @@
 					$hash = password_hash($password, PASSWORD_DEFAULT);
 					mysqli_stmt_bind_param($stmt, "sssss", $username, $firstName, $lastName, $email, $hash);
 					mysqli_execute($stmt);
-					header("Location: ../main.html?signup=success");
+					header("Location: ../services.html?signup=success");
 					exit();
 				}
 			}
@@ -47,6 +47,6 @@
 		
 	}
 	else {
-		header("Location: ../main.html");
+		header("Location: ../services.html");
 		exit();
 	}
