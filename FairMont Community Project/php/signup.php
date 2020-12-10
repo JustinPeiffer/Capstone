@@ -23,7 +23,7 @@
 			mysqli_stmt_store_result($stmt);
 			$resultCheck = mysqli_stmt_num_rows($stmt);
 			if ($resultCheck > 0) {
-				header("Location: ../signup.php?error=usertake&mail=".$email);
+				header("Location: ../Registration.html?error=usertake&mail=".$email);
 				exit();
 			}
 			else {
@@ -37,7 +37,7 @@
 					$hash = password_hash($password, PASSWORD_DEFAULT);
 					mysqli_stmt_bind_param($stmt, "sssss", $username, $firstName, $lastName, $email, $hash);
 					mysqli_execute($stmt);
-					header("Location: ../services.html?signup=success");
+					header("Location: ../main.html?signup=success");
 					exit();
 				}
 			}
@@ -47,6 +47,6 @@
 		
 	}
 	else {
-		header("Location: ../services.html");
+		header("Location: ../Registration.html");
 		exit();
 	}

@@ -2,7 +2,7 @@
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "usbw" ;
-$dBName = "fcg";
+$dBName = "fairmont community group";
 
 $conn = mysqli_connect($servername, $dBUsername,$dBPassword, $dBName);
 
