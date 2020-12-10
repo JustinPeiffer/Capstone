@@ -82,7 +82,7 @@
 		<li><a href="Donations.html">Donations</a></li>
 		<li><a href="History.html">History</a></li>
 		<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
-		<li><a href="http://localhost:8080/FairMont%20Community%20Project/php-mysql-calendar/3a-calendar.php">Events</a></li>
+		<li><a href="eventsCalendar.php">Events</a></li>
 		<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
 		<li><a href="https://www.fsd89.org/">School</a></li>
 	</ul></nav>
