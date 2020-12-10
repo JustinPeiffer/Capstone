@@ -82,9 +82,8 @@ while($file=readdir($fo))
 			&nbsp;&nbsp;&nbsp;&nbsp;";
 		}
 }
-{
         // Check or ask for the proper size -- Dr. Lewis 
-	//header("Refresh:0");
+	"Refresh:0";
 	if(file_exists("img/gallery/".$_FILES['file']['name']))
 	{
 	echo "<font color='red'>".$_FILES['file']['name']." already exist</font>";
@@ -103,7 +102,7 @@ while($file=readdir($fo))
 	else
 	{
 		echo "<font color='red'>please choose a valid image</font>";
-}}}
+}}
 ?>
 <form method="post" enctype="multipart/form-data">
 choose your image<input type="file" name="file"/><br/>
