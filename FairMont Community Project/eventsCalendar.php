@@ -37,7 +37,9 @@ require 'php/header.php';
 
     <!-- (D) EVENT FORM -->
     <div id="calblock"><form id="calform">
+	
       <input type="hidden" id="evtid"/>  
+	  
       <label for="start">Date Start</label>
       <input type="date" id="evtstart" required/>
       <label for="end">Date End</label>
@@ -46,7 +48,13 @@ require 'php/header.php';
       <textarea id="evttxt" required></textarea>
       <label for="color">Color</label>
       <input type="color" id="evtcolor" required/>
+	  <?php
+		if ($_SESSION['UserType'] == 'Admin') {
+	  ?>
       <input type="submit" id="calformsave" value="Save"/>
+	  <?php
+		}
+	  ?>
       <input type="button" id="calformdel" value="Delete"/>
       <input type="button" id="calformcx" value="Cancel"/>
     </form></div>
