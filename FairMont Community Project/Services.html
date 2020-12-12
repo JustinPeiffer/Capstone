@@ -23,10 +23,24 @@
 		}
 
 		include_once 'php/dbh.php';
-		$sql = "SELECT * FROM services";
+		$search = $_GET['search'];
+		if ($search == "") {
+			$sql = "SELECT * FROM services";
+		}
+		else {
+			$sql = "SELECT * FROM services WHERE ServiceTitle LIKE '%".$search."%'";
+		}
+		
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
-
+	?>
+		<form action="http://localhost:8080/FairMont%20Community%20Project/php/search.php" method="post">
+			<div class="container">
+			<input type="text" placeholder="search" name="search" required>
+			<button name="search-submit" type="submit">Search</button>
+			</div>
+		</form>
+	<?php
 		if ($resultCheck > 0) {
 			while ($row = mysqli_fetch_assoc($result)) {
 				echo $row['ServiceTitle']."<br>".$row['ServiceDescription']."<br><br>";
