@@ -17,8 +17,10 @@
 </style>
 
 <div class="login-container">
-<?php
+
+<?php				
 	session_start();
+	
 	if (isset($_SESSION['UID'])) {
 		echo '<form action="http://localhost:8080/FairMont%20Community%20Project/php/logout.php" method="post">
 			<div class="container">
@@ -42,14 +44,16 @@
 	}
 ?>	
 </div>
+
 <div class="topnav">
+	<img src="img/FCPG Logo.png" alt="FCPG Logo">
 	<h1>Fairmount<br>Community</h1>
 
 <!--<img src=".jpg" alt="" width="600" height="600">-->
 
 	<?php
 		if (isset($_SESSION['UID'])) {
-			echo '<h1> Hello'." ".$_SESSION['fName']." ".$_SESSION['lName'].'</h1>';
+			echo '<h1> Hello'." ".$_SESSION['fName']." ".$_SESSION['lName']." ".$_SESSION['AccessLevel'].'</h1><a href="http://localhost:8080/FairMont%20Community%20Project/Profile.html"> Edit Profile</a>';
 		}
 	?>
 	<nav><ul>
@@ -58,7 +62,7 @@
 		<li><a href="https://www.paypal.com/paypalme/FairmontCommunity/">Donations</a></li>
 		<li><a href="History.html">History</a></li>
 		<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
-		<li><a href="eventsCalendar.php">Events</a></li>
+		<li><a href="http://localhost:8080/FairMont%20Community%20Project/eventsCalendar.php">Events</a></li>
 		<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
 		<li><a href="https://www.fsd89.org/">School</a></li>
 	</ul></nav>
