@@ -14,10 +14,10 @@
 
 <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:160px;">
   <a href="#" class="w3-bar-item w3-button">Home</a>
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoA')">
   2018 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoA" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -32,10 +32,10 @@
 	<a href="#" class="w3-bar-item w3-button">December</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoB')">
   2019 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoB" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -50,10 +50,10 @@
 	<a href="#" class="w3-bar-item w3-button">December</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoC')">
   2020 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoC" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -68,10 +68,10 @@
 	<a href="#" class="w3-bar-item w3-button">December</a>
   </div>
 
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoD')">
   2021 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoD" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -86,10 +86,10 @@
 	<a href="#" class="w3-bar-item w3-button">December</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoE')">
   2022 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoE" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -104,10 +104,10 @@
 	<a href="#" class="w3-bar-item w3-button">December</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoF')">
   2023 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoF" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -122,10 +122,10 @@
 	<a href="#" class="w3-bar-item w3-button">December</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoG')">
   2024 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="demoG" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
     <a href="#" class="w3-bar-item w3-button">February</a>
 	<a href="#" class="w3-bar-item w3-button">March</a>
@@ -144,8 +144,8 @@
 
 
 <script>
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+function myAccFunc(id) {
+  var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className += " w3-green";
