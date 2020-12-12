@@ -16,66 +16,66 @@
   
   <a href="#" class="w3-bar-item w3-button">Home</a>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('YD')">
   Youth Development <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="YD" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div> 
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('REA')">
   Re-Entry Assistance <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="REA" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>  
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('R')">
   Recidivism <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="R" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>
 
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('VP')">
   Violence Prevention <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="VP" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('FPL')">
   Financial Planning and Literacy <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="FPL" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('FC')">
   Family Counseling <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="FC" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('DC')">
   Divorce Counseling <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="DC" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>
   
-  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('CSA')">
   Child Support Assistance <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="CSA" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">January</a>
   </div>
 </div>
 
 <script>
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+function myAccFunc(id) {
+  var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className += " w3-green";
