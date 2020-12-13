@@ -20,17 +20,16 @@
 </head>
 <body>
 	<h1>
-	Profile
+	Change Name
 	<br>
 	<hr size="23" color="black" noshade>
-	<?php 
-		echo "<br><br>Username: ".$_SESSION['userName']." "."<a href='http://localhost:8080/FairMont%20Community%20Project/change-username.html'>Edit</a><br>";
-		echo "<br><br>Name: ".$_SESSION['fName']." ".$_SESSION['lName']." "."<a href='http://localhost:8080/FairMont%20Community%20Project/change-name.html'>Edit</a><br>";
-		echo "<br><br>Email: ".$_SESSION['mail']." "."<a href='http://localhost:8080/FairMont%20Community%20Project/change-email.html'>Edit</a><br>";
-		echo "<br><br>Password: <a href='#'>Edit</a><br>";
-		echo "<br><br>Access Level: ".$_SESSION['UserType']."<br>";
-		//echo "<br><br>ID: ".$_SESSION['UID']."<br>";
-	?>
+	<form action="http://localhost:8080/FairMont%20Community%20Project/php/change-name.php" method="post">
+		<p>First Name</p>
+		<input type="text" placeholder="Enter First Name" name="changefname" required>
+		<p>Last Name</p>
+		<input type="text" placeholder="Enter Last Name" name="changelname" required>
+		<button name="name-submit" type="submit">Submit</button>
+	</form>
 	</h1>
 </body>
 </html>
