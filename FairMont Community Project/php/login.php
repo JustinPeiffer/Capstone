@@ -30,8 +30,10 @@
 				else if($pswCheck == true) {
 					session_start();
 					$_SESSION['UID'] = $row['UserID'];
+					$_SESSION['userName'] = $row['username'];
 					$_SESSION['fName'] = $row['FirstName'];
 					$_SESSION['lName'] = $row['LastName'];
+					$_SESSION['mail'] = $row['Email'];
 					$_SESSION['UserType'] = $row['AccessLevel'];
 					
 					
