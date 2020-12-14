@@ -1,6 +1,3 @@
-<?php
-require 'php/header.php';
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +7,9 @@ require 'php/header.php';
     <script src="phpCalendar/3c-calendar.js"></script>
   </head>
   <body>
+<?php
+require 'php/header.php';
+?>
     <!-- (B) PERIOD SELECTOR -->
     <div id="calPeriod"><?php
       // (B1) MONTH SELECTOR

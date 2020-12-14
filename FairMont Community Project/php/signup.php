@@ -3,7 +3,7 @@
 		
 		require 'dbh.php';
 		
-		$username = $_POST['uid'];
+		$username = $_POST['username'];
 		$firstName = $_POST['firstName'];
 		$lastName = $_POST['lastName'];
 		$email = $_POST['email'];
