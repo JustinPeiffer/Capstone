@@ -32,8 +32,8 @@
 			echo '<form action="http://localhost:8080/FairMont%20Community%20Project/php/login.php" method="post">
 				<label for="username" value="username"><b>Username or Email</b></label>
 				<input type="text" placeholder="Enter Username or Email" name="username" required>
-				<label for="psw"><b>Password</b></label>
-				<input type="text" placeholder="Enter Password" name="psw" required>
+				<label	for="psw"><b>Password</b></label>
+				<input  type="password" placeholder="Enter Password" name="psw" required>
 				<button name="login-submit" type="submit">Login</button>
 				<a href="http://localhost:8080/FairMont%20Community%20Project/reset-password.html">Forgot password?</a>
 				<label><input type="checkbox" checked="checked" name="remember">Remember me</label>
