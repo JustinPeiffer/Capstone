@@ -115,10 +115,10 @@ class Calendar {
 // The 3d-ajax.php save call goes here --- modify this to our phpMysql database  
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'event calandar');
+define('DB_NAME', 'fairmont community group');
 define('DB_CHARSET', 'utf8');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'password');
+define('DB_PASSWORD', 'usbw');
 
 // (G) NEW CALENDAR OBJECT
 $CAL = new Calendar();
