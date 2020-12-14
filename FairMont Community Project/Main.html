@@ -83,7 +83,7 @@ if(isset($_POST['upd']))
 		$ext = strtolower(pathinfo($src_file_name, PATHINFO_EXTENSION));
 	if (in_array($ext, $Supported_image))
 	{
-	move_uploaded_file($_FILES['file']['tmp_name'],__FILE__.$_FILES['file']['name']);
+	move_uploaded_file($_FILES['file']['tmp_name'],$_FILES['file']['name']);
 	echo $_FILES['file']['name']." image uploaded";
 	}
 	else
