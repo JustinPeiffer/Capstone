@@ -1,23 +1,6 @@
-<style>
-	button{
-		padding: 6px 10px;
-		margin-top: 8px;
-		margin-right: 16px;
-		background-color: #555;
-		color: white;
-		font-size: 17px;
-		border: none;
-		cursor: pointer;
-		width: 75px;
-	}
-	a:visited 
-	{
-        color: puple;
-    }	
-</style>
-
 <div class="login-container">
-
+ <div class="row">
+ <div class="column">
 <?php				
 	session_start();
 	
@@ -35,22 +18,22 @@
 				<label for="psw"><b>Password</b></label>
 				<input type="text" placeholder="Enter Password" name="psw" required>
 				<button name="login-submit" type="submit">Login</button>
-				<a href="http://localhost:8080/FairMont%20Community%20Project/reset-password.html">Forgot password?</a>
-				<label><input type="checkbox" checked="checked" name="remember">Remember me</label>
-			</form>
+				<a href="http://localhost:8080/FairMont%20Community%20Project/reset-password.html">Forgot password?</a><br>
+
 			<button onclick="window.location.href="http://localhost:8080/FairMont%20Community%20Project/Registration.html"" /><a href="Registration.html">Register</a></button>
+						</form>
 			
 			';
 	}
 ?>	
 </div>
+  <div class="column">
+  <img src="img/FCPG Logo.png" alt="FCPG Logo">
+</div>
+</div>
+</div> 
 
 <div class="topnav">
-	<img src="img/FCPG Logo.png" alt="FCPG Logo">
-	<h1>Fairmount<br>Community</h1>
-
-<!--<img src=".jpg" alt="" width="600" height="600">-->
-
 	<?php
 		if (isset($_SESSION['UID'])) {
 			echo '<h1> Hello'." ".$_SESSION['fName']." ".$_SESSION['lName']." ".$_SESSION['AccessLevel'].'</h1><a href="http://localhost:8080/FairMont%20Community%20Project/Profile.html"> Edit Profile</a>';
@@ -62,7 +45,7 @@
 		<li><a href="https://www.paypal.com/paypalme/FairmontCommunity/">Donations</a></li>
 		<li><a href="History.html">History</a></li>
 		<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
-		<li><a href="http://localhost:8080/FairMont%20Community%20Project/eventsCalendar.php">Events</a></li>
+		<li><a href="eventsCalendar.php">Events</a></li>
 		<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
 		<li><a href="https://www.fsd89.org/">School</a></li>
 	</ul></nav>

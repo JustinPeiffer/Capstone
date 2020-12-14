@@ -1,8 +1,4 @@
 @import "Main.css";
-
-/* (A) FONT */
-// html, body { font-family: Verdana, arial, sans-serif; }
-
 /* (B) PERIOD SELECTOR */
 #calPeriod input, #calPeriod select {
   padding: 10px;
@@ -36,7 +32,8 @@
   border: 1px solid #eee;
 }
 .calsq.blank { background: #f2f2f2; }
-.calnum { color: #888; }
+.calsq.day { background: #b7b7b7; }
+.calnum { color: #fff; }
 .calevt {
   height: 20px;
   font-size: 0.8em;
