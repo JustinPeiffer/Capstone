@@ -122,6 +122,4 @@ define('DB_PASSWORD', 'password');
 
 // (G) NEW CALENDAR OBJECT
 $CAL = new Calendar();
-
-//$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
-//set_charset($DB_CHARSET);
+?>
